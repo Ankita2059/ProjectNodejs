@@ -54,8 +54,6 @@ router.post('/saveEdited/:id', function(req,res){
   const index = expenses.findIndex(expense => { return expense._id == req.params.id});
   expenses.splice(index,1,{_id:req.params.id, ...formData})
   res.redirect('/')
-
-
 })
 
 module.exports = router;
